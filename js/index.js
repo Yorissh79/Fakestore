@@ -86,26 +86,26 @@ if (location.pathname === "/categories.html") {
 
     sendBtn.addEventListener("click", function () {
 
-        sendData()
+        sendData(lastCall)
         reve.innerHTML = `` 
-
     })
 
 
-    async function sendData () {
+    async function sendData (callback) {
 
         try {
 
-            await fetch("https://northwind.vercel.app/api/categories", {
-                method : "POST",
-                headers : {
-                    "Content-type" : "application/json"
-                },
-                body : JSON.stringify({
-                    title : `${inpTitle.value}`,
-                    description : `${inpDes.value}`
-                })
-            })
+            if (inpTitle.value != "" && inpDes.value != "") {
+                await fetch("https://northwind.vercel.app/api/categories", {
+                    method : "POST",
+                    headers : {
+                        "Content-type" : "application/json"
+                    },
+                    body : JSON.stringify({
+                        title : `${inpTitle.value}`,
+                        description : `${inpDes.value}`
+                    })
+            })}
 
         }
 
@@ -113,8 +113,7 @@ if (location.pathname === "/categories.html") {
             console.log(error)
         }
 
-
-
+        callback()
     }
 
     async function getDataN () {

@@ -54,7 +54,12 @@
         }
 
         .added {
-            background-color: rgba($buy_btn_c, $alpha: 0.8);
+            background-color: hsla(0, 77%, 41%, 0.747);
+            cursor: alias;
+
+            &:hover {
+                background-color: hsla(0, 77%, 41%, 0.4);
+            }
         }
     }
 

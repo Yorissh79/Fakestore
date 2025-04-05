@@ -1,6 +1,11 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 @import "_variables.scss";
 @import 'header';
 @import 'home';
-@import 'basket';
 @import 'categories';
 @import 'card';

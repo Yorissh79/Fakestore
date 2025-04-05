@@ -1,0 +1,62 @@
+.card {
+    width: 300px;
+    height: 350px;
+    background-color: $main_background_c;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .img {
+        padding-top: 10px;
+        width: 100%;
+        height: 60%;
+        // background-color: gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .text {
+        width: 90%;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+
+        .title {
+            overflow: hidden;
+            width: 90%;
+            height: 20px;
+            text-overflow: ellipsis;
+            text-wrap: nowrap;
+        }
+
+        .price {
+            padding-bottom: 10px;
+        }
+
+        .b_btn {
+            width: 100px;
+            height: 40px;
+            border: none;
+            background-color: $buy_btn_c;
+            color: $main_background_c;
+            border-radius: 15px;
+            align-self: flex-start;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba($buy_btn_c, $alpha: 0.8);
+            }
+        }
+
+        .added {
+            background-color: rgba($buy_btn_c, $alpha: 0.8);
+        }
+    }
+
+
+}
